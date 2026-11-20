@@ -1,0 +1,422 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #245b3c;
+    --verde-escuro: #173d2a;
+    --verde-claro: #e7f2e8;
+    --rosa: #ef7ca4;
+    --fundo: #f7f8f3;
+    --texto: #26332b;
+    --suave: #68756c;
+    --borda: #e1e8df;
+}
+
+body {
+    margin: 0;
+    font-family: Nunito, Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topo {
+    min-height: 82px;
+    padding: 14px clamp(20px, 6vw, 84px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--verde-escuro);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.marca-icone {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 13px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 1.7rem;
+}
+
+nav {
+    display: flex;
+    gap: clamp(12px, 2.5vw, 32px);
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-weight: 800;
+    color: #506054;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: var(--rosa);
+}
+
+.botao-topo,
+.botao-principal {
+    display: inline-flex;
+    background: var(--rosa);
+    color: #fff;
+    font-weight: 900;
+    padding: 12px 18px;
+    border-radius: 10px;
+}
+
+.hero {
+    padding: clamp(44px, 7vw, 90px) clamp(22px, 8vw, 120px);
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(120deg, #f1f7ec, #fff7f1);
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--verde);
+    font-size: .76rem;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(2.25rem, 4.5vw, 4.3rem);
+    line-height: 1.08;
+    margin: 0;
+}
+
+.hero h1 span {
+    color: var(--rosa);
+}
+
+.hero p {
+    font-size: 1.08rem;
+    color: var(--suave);
+    max-width: 590px;
+    margin: 22px 0 28px;
+}
+
+.hero-ilustracao {
+    min-height: 300px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.circulo {
+    width: clamp(180px, 24vw, 280px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #d9ead7;
+    color: var(--verde);
+    font-size: clamp(6rem, 13vw, 10rem);
+}
+
+.folha {
+    position: absolute;
+    right: 12%;
+    top: 12%;
+    font-size: 3.4rem;
+}
+
+.mini-card {
+    position: absolute;
+    bottom: 8%;
+    left: 4%;
+    background: white;
+    padding: 16px 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px #254b2a18;
+    color: var(--suave);
+}
+
+.mini-card strong {
+    color: var(--verde);
+    font-size: 1.15rem;
+}
+
+.secao {
+    padding: clamp(45px, 6vw, 76px) clamp(20px, 8vw, 120px);
+}
+
+.cabecalho-secao {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 30px;
+}
+
+.cabecalho-secao h2 {
+    font-size: clamp(1.8rem, 3.3vw, 2.7rem);
+    color: var(--verde-escuro);
+    margin: 0 0 12px;
+}
+
+.cabecalho-secao p {
+    color: var(--suave);
+}
+
+.tabela-pontos {
+    max-width: 760px;
+    margin: auto;
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.linha-tabela {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 17px 24px;
+    border-bottom: 1px solid #edf0eb;
+}
+
+.linha-tabela:last-child {
+    border: 0;
+}
+
+.linha-titulo {
+    background: var(--verde);
+    color: #fff;
+    font-weight: 900;
+}
+
+.linha-tabela:not(.linha-titulo) strong {
+    color: var(--verde);
+}
+
+.calculadora {
+    background: #edf4e9;
+}
+
+.painel-usuario {
+    max-width: 920px;
+    margin: auto;
+    display: grid;
+    gap: 18px;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.saldo,
+.bloco {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 17px;
+    padding: 24px;
+}
+
+.saldo {
+    background: #245b3c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.saldo span,
+.saldo small {
+    color: #dceade;
+}
+
+.saldo strong {
+    font-size: 2.4rem;
+}
+
+.bloco h3 {
+    margin: 0 0 8px;
+    color: var(--verde-escuro);
+}
+
+.bloco p {
+    color: var(--suave);
+    margin-top: 0;
+}
+
+.bloco form {
+    display: grid;
+    gap: 9px;
+}
+
+.bloco label {
+    font-weight: 800;
+}
+
+.bloco input,
+.bloco select {
+    padding: 13px;
+    border: 1px solid #d5dfd4;
+    border-radius: 9px;
+    font: inherit;
+    background: #fff;
+}
+
+.bloco button {
+    border: 0;
+    border-radius: 9px;
+    padding: 14px;
+    background: var(--verde);
+    color: #fff;
+    font: inherit;
+    font-weight: 900;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.feedback {
+    font-weight: 800;
+}
+
+.giftcards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.giftcard,
+.registro {
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 16px;
+    background: #fbfdf9;
+}
+
+.giftcard h4 {
+    margin: 0;
+    color: var(--verde);
+}
+
+.giftcard button {
+    width: 100%;
+}
+
+.registro {
+    margin: 8px 0;
+}
+
+.registro small {
+    display: block;
+    color: var(--suave);
+}
+
+.aviso {
+    max-width: 900px;
+    margin: 18px auto;
+    padding: 15px 20px;
+    background: #fff8fb;
+    border-left: 4px solid var(--rosa);
+    border-radius: 0 10px 10px 0;
+    color: #5e4c54;
+}
+
+.aviso a {
+    color: var(--verde);
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+footer {
+    padding: 30px 22px;
+    background: #173d2a;
+    color: #eaf2e8;
+    text-align: center;
+}
+
+.marca-rodape {
+    color: #fff;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #d1dfd1;
+}
+
+footer small {
+    color: #b4c9b7;
+}
+
+@media (max-width: 900px) {
+
+    .topo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topo nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-ilustracao {
+        min-height: 230px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .topo {
+        position: static;
+    }
+
+    .hero {
+        padding: 42px 22px;
+    }
+
+    .secao {
+        padding: 42px 18px;
+    }
+
+    .giftcards {
+        grid-template-columns: 1fr;
+    }
+
+    .saldo strong {
+        font-size: 2rem;
+    }
+
+    .linha-tabela {
+        padding: 14px;
+    }
+}

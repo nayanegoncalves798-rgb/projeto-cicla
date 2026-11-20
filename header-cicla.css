@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+#cicla-header,#cicla-header *{box-sizing:border-box}
+#cicla-header{min-height:110px;background:#fffaf6;color:#31533a;padding:12px clamp(18px,5.2vw,100px);display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;font-family:Nunito,Arial,sans-serif;width:100%;max-width:none;border:0;box-shadow:none;position:relative;z-index:5}
+#cicla-header a{text-decoration:none}
+#cicla-header .cicla-marca{display:flex;align-items:center;gap:10px;font-size:1.45rem;font-weight:900;color:#31533a;white-space:nowrap;line-height:1.2}
+#cicla-header .cicla-marca img{width:48px;height:48px;object-fit:contain}
+#cicla-header .cicla-menu{display:flex;align-items:center;gap:clamp(12px,1.6vw,28px);flex-wrap:wrap;justify-content:center;margin:0;padding:0;background:none;border:0;width:auto;max-width:none;box-shadow:none}
+#cicla-header .cicla-menu a{font-size:1rem;color:#263e31;font-weight:900;white-space:nowrap;padding:0;margin:0;line-height:1.5;background:none;border:0}
+#cicla-header .cicla-menu a:hover,#cicla-header .cicla-menu a.ativo{color:#ed719b}
+#cicla-header .cicla-acoes{display:flex;align-items:center;gap:10px}
+#cicla-header .cicla-colaborador,#cicla-header .cicla-sair{display:inline-flex;align-items:center;justify-content:center;background:#ed719b;color:white;padding:14px 20px;border:0;border-radius:9px;font:900 1rem Nunito,Arial,sans-serif;white-space:nowrap;cursor:pointer;text-decoration:none;box-shadow:none;min-height:0;width:auto;margin:0}
+#cicla-header .cicla-sair{background:#31583c}
+#cicla-header .escondido{display:none!important}
+@media(max-width:800px){#cicla-header{justify-content:center;min-height:0;padding:18px 16px;gap:15px}#cicla-header .cicla-menu{order:3;width:100%;gap:14px}#cicla-header .cicla-acoes{margin-left:auto}}
+@media(max-width:470px){#cicla-header .cicla-acoes{margin-left:0}#cicla-header .cicla-menu a{font-size:.88rem}}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administração | CICLA</title><link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="../header-cicla.css">
+</head>
+<body>
+<header id="cicla-header"><a class="cicla-marca" href="../index/index.html"><img src="../png icon.png" alt="">CICLA</a><nav class="cicla-menu" aria-label="Navegação principal"><a href="../index/index.html">Início</a><a href="../locais/locais.html">Locais</a><a href="../tutoriais/tutoriais.html">Tutoriais</a><a href="../beneficios/beneficios.html">Benefícios</a><a href="../sobre/sobre.html">Sobre</a></nav><div class="cicla-acoes"><button id="sair" class="cicla-sair escondido" type="button">Sair</button></div></header>
+<main class="container">
+  <section class="hero"><span class="tag">GESTÃO DE PARCEIROS</span><h1>Análise de empresas</h1><p>Confira os dados enviados e aprove ou rejeite os cadastros empresariais do CICLA.</p></section>
+  <section id="loginBox" class="painel"><h2><i class="fa-solid fa-lock"></i> Acesso administrativo</h2><p>Entre com a conta que foi autorizada como administradora no Supabase.</p>
+    <form id="formLogin"><label>E-mail<input id="email" type="email" required autocomplete="username"></label><label>Senha<input id="senha" type="password" required autocomplete="current-password"></label><button class="btn-principal" type="submit">Entrar</button></form>
+  </section>
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+  <section id="areaAdmin" class="painel escondido"><div class="cabecalho-lista"><div><h2>Solicitações recebidas</h2><p>Analise os dados antes de tomar uma decisão.</p></div><button id="atualizar" class="btn-secundario" type="button"><i class="fa-solid fa-rotate"></i> Atualizar</button></div>
+    <div class="contadores"><div><strong id="totalPendente">0</strong><span>Aguardando análise</span></div><div><strong id="totalAprovado">0</strong><span>Aprovadas</span></div><div><strong id="totalRejeitado">0</strong><span>Rejeitadas</span></div></div>
+    <div id="listaEmpresas" class="lista"><p>Carregando solicitações...</p></div>
+    <hr>
+    <div class="cabecalho-lista"><div><h2>Cadastrar gift card parceiro</h2><p>Cadastre apenas recompensas confirmadas com empresas parceiras.</p></div></div>
+    <form id="formGiftCard" class="form-gift">
+      <label>Empresa parceira<input id="parceiro" required maxlength="120"></label>
+      <label>Nome do gift card<input id="tituloGift" required maxlength="120"></label>
+      <label>Descrição<input id="descricaoGift" maxlength="500"></label>
+      <label>Custo em pontos<input id="custoGift" type="number" min="1" step="1" required></label>
+      <label>Estoque (deixe vazio para ilimitado)<input id="estoqueGift" type="number" min="0" step="1"></label>
+      <button class="btn-principal" type="submit">Cadastrar recompensa</button>
+    </form>
+    <div class="cabecalho-lista"><div><h2>Solicitações de gift cards</h2><p>Aprove, recuse ou disponibilize o voucher ao usuário.</p></div><button id="atualizarResgates" class="btn-secundario" type="button">Atualizar</button></div>
+    <div id="listaResgates" class="lista"><p>Carregando resgates...</p></div>
+  </section>
+  <p class="nota"><i class="fa-solid fa-shield-halved"></i> Esta página só funciona para uma conta autorizada no banco de dados. Não compartilhe sua senha de administrador.</p>
+</main><script type="module" src="admin.js"></script>
+</body></html>

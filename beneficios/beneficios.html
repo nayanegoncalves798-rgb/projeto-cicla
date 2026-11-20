@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>CICLA | Benefícios</title>
+
+    <link rel="stylesheet" href="beneficios.css">
+    <link rel="icon" href="../png icon.png">
+    <link rel="stylesheet" href="../header-cicla.css">
+</head>
+
+<body>
+
+    <header id="cicla-header">
+
+        <a class="cicla-marca" href="../index/index.html">
+            <img src="../png icon.png" alt="">CICLA
+        </a>
+
+        <nav class="cicla-menu" aria-label="Navegação principal">
+
+            <a href="../index/index.html">Início</a>
+
+            <a href="../locais/locais.html">Locais</a>
+
+            <a href="../tutoriais/tutoriais.html">Tutoriais</a>
+
+            <a class="ativo" href="../beneficios/beneficios.html">Benefícios</a>
+
+            <a href="../sobre/sobre.html">Sobre</a>
+
+        </nav>
+
+        <div class="cicla-acoes">
+
+            <a class="cicla-colaborador" href="../login/login.html">
+                Seja colaborador
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <span class="etiqueta">
+                    RECICLE • SOME PONTOS • TRANSFORME
+                </span>
+
+                <h1>
+                    Uma atitude sustentável merece
+                    <span>reconhecimento.</span>
+                </h1>
+
+                <p>
+                    Registre suas entregas, aguarde a confirmação do ponto de coleta e use seus pontos para solicitar gift cards de empresas parceiras.
+                </p>
+
+                <a class="botao-principal" href="#minha-conta">
+                    Acompanhar minha conta
+                </a>
+
+            </div>
+
+            <div class="hero-ilustracao">
+
+                <div class="circulo">♻</div>
+
+                <div class="folha">🌱</div>
+
+                <div class="mini-card">
+                    Pontos<br>
+                    <strong>por reciclar</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="secao" id="pontuacao">
+
+            <div class="cabecalho-secao">
+
+                <span class="etiqueta">PONTUAÇÃO</span>
+
+                <h2>Quanto vale cada quilo?</h2>
+
+                <p>
+                    Valores iniciais definidos para o projeto CICLA. Os pontos só são liberados após a empresa confirmar o peso recebido.
+                </p>
+
+            </div>
+
+            <div class="tabela-pontos">
+
+                <div class="linha-tabela linha-titulo">
+                    <span>Material</span>
+                    <span>Pontos por kg</span>
+                </div>
+
+                <div class="linha-tabela">
+                    <span>📄 Papel</span>
+                    <strong>5 pontos</strong>
+                </div>
+
+                <div class="linha-tabela">
+                    <span>📦 Papelão</span>
+                    <strong>4 pontos</strong>
+                </div>
+
+                <div class="linha-tabela">
+                    <span>♻️ Plástico</span>
+                    <strong>10 pontos</strong>
+                </div>
+
+                <div class="linha-tabela">
+                    <span>🍾 Vidro</span>
+                    <strong>3 pontos</strong>
+                </div>
+
+                <div class="linha-tabela">
+                    <span>🥫 Metal</span>
+                    <strong>15 pontos</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="secao calculadora" id="minha-conta">
+
+            <div class="cabecalho-secao">
+
+                <span class="etiqueta">ÁREA DO COLABORADOR</span>
+
+                <h2>Minha carteira CICLA</h2>
+
+                <p>
+                    Entre na sua conta para registrar entregas, consultar o saldo e solicitar recompensas.
+                </p>
+
+            </div>
+
+            <div id="loginAviso" class="aviso">
+                Verificando sua conta...
+            </div>
+
+            <div id="painelUsuario" class="painel-usuario escondido">
+
+                <div class="saldo">
+
+                    <span>Saldo disponível</span>
+
+                    <strong id="saldo">0 pontos</strong>
+
+                    <small id="resumoSaldo">
+                        Carregando histórico...
+                    </small>
+
+                </div>
+
+                <div class="bloco">
+
+                    <h3>Registrar uma entrega</h3>
+
+                    <p>
+                        Informe o material, o ponto de coleta e o peso aproximado. A pontuação será calculada somente depois da conferência da empresa.
+                    </p>
+
+                    <form id="formEntrega">
+
+                        <label for="ponto">Ponto de coleta</label>
+
+                        <select id="ponto" required>
+                            <option value="">Carregando pontos...</option>
+                        </select>
+
+                        <label for="material">Material</label>
+
+                        <select id="material" required>
+                            <option value="Papel">Papel</option>
+                            <option value="Papelão">Papelão</option>
+                            <option value="Plástico">Plástico</option>
+                            <option value="Vidro">Vidro</option>
+                            <option value="Metal">Metal</option>
+                        </select>
+
+                        <label for="peso">Peso estimado (kg)</label>
+
+                        <input
+                            id="peso"
+                            type="number"
+                            min="0.1"
+                            max="10000"
+                            step="0.1"
+                            required
+                            placeholder="Ex.: 2,5"
+                        >
+
+                        <button type="submit">
+                            Enviar entrega para confirmação
+                        </button>
+
+                    </form>
+
+                    <p id="entregaMsg" class="feedback" role="status"></p>
+
+                </div>
+
+                <div class="bloco">
+
+                    <h3>Minhas entregas</h3>
+
+                    <div id="entregas" class="lista-registros">
+                        Carregando...
+                    </div>
+
+                </div>
+
+                <div class="bloco">
+
+                    <h3>Gift cards disponíveis</h3>
+
+                    <p>
+                        Os resgates ficam sujeitos à disponibilidade e à validação da equipe CICLA e da empresa parceira.
+                    </p>
+
+                    <div id="giftcards" class="giftcards">
+                        Carregando recompensas...
+                    </div>
+
+                </div>
+
+                <div class="bloco">
+
+                    <h3>Meus resgates</h3>
+
+                    <div id="resgates" class="lista-registros">
+                        Carregando...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <a class="marca marca-rodape" href="../index/index.html">
+            <span class="marca-icone">♻</span>CICLA
+        </a>
+
+        <p>
+            Conectando pessoas e atitudes por um futuro mais sustentável.
+        </p>
+
+        <small>
+            © 2026 CICLA • Projeto educativo
+        </small>
+
+    </footer>
+
+    <script type="module" src="beneficios.js"></script>
+
+</body>
+
+</html>

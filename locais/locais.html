@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>CICLA | Pontos de coleta</title>
+
+    <link rel="stylesheet" href="locais.css">
+    <link rel="icon" href="../png icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../header-cicla.css">
+</head>
+
+<body>
+
+    <header id="cicla-header">
+
+        <a class="cicla-marca" href="../index/index.html">
+            <img src="../png icon.png" alt="">CICLA
+        </a>
+
+        <nav class="cicla-menu" aria-label="Navegação principal">
+
+            <a href="../index/index.html">Início</a>
+            <a class="ativo" href="../locais/locais.html">Locais</a>
+            <a href="../tutoriais/tutoriais.html">Tutoriais</a>
+            <a href="../beneficios/beneficios.html">Benefícios</a>
+            <a href="../sobre/sobre.html">Sobre</a>
+
+        </nav>
+
+        <div class="cicla-acoes">
+
+            <a class="cicla-colaborador" href="../login/login.html">
+                Seja colaborador
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <span class="tag">DESCARTE CONSCIENTE</span>
+
+            <h1>
+                Encontre um ponto de coleta
+                <span>participante.</span>
+            </h1>
+
+            <p>
+                Pesquise os locais cadastrados pelas empresas parceiras do CICLA e consulte o endereço para planejar sua entrega.
+            </p>
+
+        </section>
+
+        <section class="busca">
+
+            <label for="pesquisa">
+                Pesquisar por nome, bairro, cidade ou endereço
+            </label>
+
+            <input
+                id="pesquisa"
+                type="search"
+                placeholder="Ex.: Centro, Anápolis..."
+            >
+
+            <button id="limpar" type="button">
+                Limpar
+            </button>
+
+        </section>
+
+        <div
+            id="aviso"
+            class="aviso"
+            role="status"
+            aria-live="polite"
+        >
+            Carregando pontos de coleta...
+        </div>
+
+        <section
+            id="listaLocais"
+            class="lista"
+            aria-live="polite"
+        ></section>
+
+        <section class="sugerir">
+
+            <div>
+
+                <h2>Tem uma empresa ou conhece um ponto?</h2>
+
+                <p>
+                    Empresas podem criar uma conta e cadastrar seus locais após a aprovação do CICLA.
+                </p>
+
+            </div>
+
+            <a href="../login/login.html">
+                Cadastrar como empresa
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <strong>♻ CICLA</strong>
+
+        <p>
+            Conectando pessoas e atitudes por um futuro mais sustentável.
+        </p>
+
+        <small>© 2026 CICLA</small>
+
+    </footer>
+
+    <script type="module" src="locais.js"></script>
+
+</body>
+
+</html>

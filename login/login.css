@@ -1,0 +1,289 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f8f7f2;
+    color: #333;
+}
+
+/* CABEÇALHO */
+
+header {
+    min-height: 75px;
+    padding: 15px 7%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #35553c;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.voltar {
+    color: #35553c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    color: #ef6f9d;
+}
+
+
+.container {
+    width: min(1100px, 92%);
+    min-height: calc(100vh - 75px);
+    margin: 0 auto;
+    padding: 55px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* LADO DE APRESENTAÇÃO */
+
+.lado-esquerdo {
+    padding: 20px;
+}
+
+.folha {
+    display: block;
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.lado-esquerdo h1 {
+    color: #27452f;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.lado-esquerdo p {
+    color: #626b60;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+
+.login-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h2 {
+    color: #35553c;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+
+.tipos-conta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.tipo {
+    padding: 17px 10px;
+    background: #f8f7f2;
+    color: #35553c;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tipo:hover {
+    border-color: #9ab594;
+}
+
+.tipo.selecionado {
+    background: #edf5e9;
+    border-color: #688c63;
+    font-weight: bold;
+}
+
+/* ALTERNAR ENTRE LOGIN E CADASTRO */
+
+.alternar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 25px;
+}
+
+.alternar button {
+    padding: 13px 8px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: #777;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alternar button.ativo {
+    color: #35553c;
+    border-bottom-color: #ef6f9d;
+}
+
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    color: #35553c;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.campo input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d9ded6;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+    color: #333;
+}
+
+.campo input:focus {
+    border-color: #688c63;
+    box-shadow: 0 0 0 3px rgba(104, 140, 99, 0.13);
+}
+
+.campo input::placeholder {
+    color: #aaa;
+}
+
+
+.escondido {
+    display: none !important;
+}
+
+
+.botao-principal {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #ef7ca4;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-principal:hover {
+    background: #df5b8b;
+    transform: translateY(-1px);
+}
+
+.botao-principal:focus-visible,
+.tipo:focus-visible,
+.alternar button:focus-visible {
+    outline: 3px solid #688c63;
+    outline-offset: 3px;
+}
+
+
+#mensagem {
+    margin-top: 15px;
+    color: #35553c;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.termos {
+    margin-top: 23px;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 0;
+    }
+
+    .lado-esquerdo {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .lado-esquerdo p {
+        margin: 0 auto;
+    }
+
+    .folha {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .voltar {
+        font-size: 13px;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | CICLA</title>
+    <link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="../header-cicla.css">
+</head>
+<body>
+
+    <header id="cicla-header"><a class="cicla-marca" href="../index/index.html"><img src="../png icon.png" alt="">CICLA</a><nav class="cicla-menu" aria-label="Navegação principal"><a href="../index/index.html">Início</a><a href="../locais/locais.html">Locais</a><a href="../tutoriais/tutoriais.html">Tutoriais</a><a href="../beneficios/beneficios.html">Benefícios</a><a href="../sobre/sobre.html">Sobre</a></nav><div class="cicla-acoes"><a class="cicla-colaborador" href="../login/login.html">Seja colaborador</a></div></header>
+
+    <main class="container">
+
+        <section class="lado-esquerdo">
+            <span class="folha">🌱</span>
+
+            <h1>Faça parte de um futuro mais sustentável!</h1>
+
+            <p>
+                Compartilhe conhecimento, encontre pontos
+                de coleta e ajude a transformar o planeta.
+            </p>
+        </section>
+
+        <section class="login-card">
+
+            <h2 id="titulo">Bem-vindo ao CICLA!</h2>
+
+            <p class="subtitulo" id="subtitulo">
+                Escolha seu tipo de conta para continuar.
+            </p>
+
+            <!-- Escolha do tipo de conta -->
+            <div class="tipos-conta">
+
+                <button
+                    type="button"
+                    class="tipo selecionado"
+                    data-tipo="usuario"
+                    aria-pressed="true"
+                >
+                    👤<br>Usuário comum
+                </button>
+
+                <button
+                    type="button"
+                    class="tipo"
+                    data-tipo="empresa"
+                    aria-pressed="false"
+                >
+                    🏢<br>Empresa
+                </button>
+
+            </div>
+
+            <!-- Alternar entre login e cadastro -->
+            <div class="alternar">
+
+                <button
+                    type="button"
+                    id="btnLogin"
+                    class="ativo"
+                    aria-pressed="true"
+                >
+                    Entrar
+                </button>
+
+                <button
+                    type="button"
+                    id="btnCadastro"
+                    aria-pressed="false"
+                >
+                    Criar conta
+                </button>
+
+            </div>
+
+            <!-- Formulário -->
+            <form id="formLogin">
+
+                <div id="campoNome" class="campo escondido">
+                    <label for="nome">Nome completo</label>
+
+                    <input
+                        id="nome"
+                        name="nome"
+                        type="text"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                        disabled
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        id="senha"
+                        name="senha"
+                        type="password"
+                        placeholder="Digite sua senha"
+                        minlength="6"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div id="campoCnpj" class="campo escondido">
+
+                    <label for="nomeEmpresa">Nome da empresa</label>
+
+                    <input
+                        id="nomeEmpresa"
+                        name="nomeEmpresa"
+                        type="text"
+                        placeholder="Nome da empresa"
+                        disabled
+                    >
+
+                    <label for="cnpj">CNPJ da empresa</label>
+
+                    <input
+                        id="cnpj"
+                        name="cnpj"
+                        type="text"
+                        placeholder="Digite o CNPJ"
+                        disabled
+                    >
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="botao-principal"
+                    id="btnEnviar"
+                >
+                    Entrar
+                </button>
+
+                <p id="mensagem" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <p class="termos">
+                Ao continuar, você concorda com os termos
+                de uso e a política de privacidade do CICLA.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="login.js"></script>
+
+</body>
+</html>

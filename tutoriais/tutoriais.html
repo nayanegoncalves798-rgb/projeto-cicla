@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>CICLA | Tutoriais</title>
+
+    <link rel="stylesheet" href="tutoriais.css">
+    <link rel="icon" href="../png icon.png">
+    <link rel="stylesheet" href="../header-cicla.css">
+</head>
+
+<body>
+
+    <header id="cicla-header">
+
+        <a class="cicla-marca" href="../index/index.html">
+            <img src="../png icon.png" alt="">CICLA
+        </a>
+
+        <nav class="cicla-menu" aria-label="Navegação principal">
+
+            <a href="../index/index.html">Início</a>
+            <a href="../locais/locais.html">Locais</a>
+            <a class="ativo" href="../tutoriais/tutoriais.html">Tutoriais</a>
+            <a href="../beneficios/beneficios.html">Benefícios</a>
+            <a href="../sobre/sobre.html">Sobre</a>
+
+        </nav>
+
+        <div class="cicla-acoes">
+
+            <a class="cicla-colaborador" href="../login/login.html">
+                Seja colaborador
+            </a>
+
+        </div>
+
+    </header>
+
+    <section class="cabecalho">
+
+        <small>CICLA • APRENDA E COMPARTILHE</small>
+
+        <h1>
+            Ideias que inspiram uma vida
+            <span>mais sustentável.</span>
+        </h1>
+
+        <p>
+            Encontre dicas de reciclagem e compartilhe suas próprias experiências com a comunidade.
+        </p>
+
+    </section>
+
+    <main class="conteudo">
+
+        <section class="criar">
+
+            <div>
+
+                <span class="tag">
+                    SUA EXPERIÊNCIA TAMBÉM ENSINA
+                </span>
+
+                <h2>Compartilhe um tutorial</h2>
+
+                <p>
+                    Conte como reutilizar, separar ou descartar materiais corretamente.
+                </p>
+
+            </div>
+
+            <form id="formPost">
+
+                <label for="titulo">Título</label>
+
+                <input
+                    id="titulo"
+                    maxlength="120"
+                    required
+                    placeholder="Ex.: Como reutilizar potes de vidro"
+                >
+
+                <label for="categoria">Categoria</label>
+
+                <select id="categoria">
+
+                    <option value="reciclagem">
+                        Reciclagem
+                    </option>
+
+                    <option value="sustentabilidade">
+                        Sustentabilidade
+                    </option>
+
+                    <option value="descarte">
+                        Descarte correto
+                    </option>
+
+                </select>
+
+                <label for="conteudoPost">
+                    Descrição e passo a passo
+                </label>
+
+                <textarea
+                    id="conteudoPost"
+                    rows="5"
+                    maxlength="3000"
+                    required
+                    placeholder="Explique sua dica para outras pessoas..."
+                ></textarea>
+
+                <button type="submit">
+                    Publicar tutorial
+                </button>
+
+                <p id="formMsg" role="status"></p>
+
+            </form>
+
+        </section>
+
+        <section class="mural-area">
+
+            <div class="barra-filtros">
+
+                <input
+                    id="pesquisa"
+                    type="search"
+                    placeholder="Pesquisar tutoriais..."
+                >
+
+                <select id="filtro">
+
+                    <option value="todos">
+                        Todas as categorias
+                    </option>
+
+                    <option value="reciclagem">
+                        Reciclagem
+                    </option>
+
+                    <option value="sustentabilidade">
+                        Sustentabilidade
+                    </option>
+
+                    <option value="descarte">
+                        Descarte correto
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div id="mural" class="mural">
+                Carregando publicações...
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <strong>♻ CICLA</strong>
+
+        <p>
+            Conectando pessoas, iniciativas e soluções para um futuro mais consciente.
+        </p>
+
+        <small>© 2026 CICLA</small>
+
+    </footer>
+
+    <script type="module" src="tutoriais.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f7f4;
+    color: #19352b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topo {
+    min-height: 68px;
+    background: #fff;
+    border-bottom: 1px solid #e0e8e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px max(5%, calc((100% - 1080px)/2));
+    gap: 16px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #19734b;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 34px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    padding: 26px 0;
+}
+
+.tag {
+    font-size: .75rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: #278254;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 10px 0;
+}
+
+.hero p,
+.painel p {
+    line-height: 1.6;
+    color: #5d7066;
+}
+
+.painel {
+    background: #fff;
+    border: 1px solid #e1e9e2;
+    border-radius: 18px;
+    padding: 24px;
+    margin: 18px 0;
+    box-shadow: 0 8px 24px #19352b0a;
+}
+
+.painel h2 {
+    margin-top: 0;
+}
+
+.painel label {
+    display: block;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #30483b;
+}
+
+.painel input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 7px;
+    border: 1px solid #ccd8ce;
+    border-radius: 9px;
+    font: inherit;
+}
+
+.btn-principal,
+.btn-secundario,
+.btn-aprovar,
+.btn-rejeitar {
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-principal,
+.btn-aprovar {
+    background: #18784c;
+    color: white;
+}
+
+.btn-secundario {
+    background: #eaf2ec;
+    color: #20563b;
+}
+
+.btn-rejeitar {
+    background: #fff0ee;
+    color: #a22b22;
+}
+
+.btn-principal:disabled,
+.btn-aprovar:disabled,
+.btn-rejeitar:disabled {
+    opacity: .55;
+    cursor: wait;
+}
+
+.aviso {
+    display: none;
+    padding: 13px 16px;
+    border-radius: 10px;
+    margin: 16px 0;
+    line-height: 1.5;
+}
+
+.aviso.visivel {
+    display: block;
+}
+
+.aviso.erro {
+    background: #fff0ee;
+    color: #9d2921;
+}
+
+.aviso.sucesso {
+    background: #e8f6ed;
+    color: #1a653d;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.cabecalho-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.contadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.contadores div {
+    background: #f2f7f3;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.contadores strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #18784c;
+}
+
+.contadores span {
+    font-size: .88rem;
+    color: #5d7066;
+}
+
+.empresa {
+    border: 1px solid #e0e8e1;
+    border-radius: 13px;
+    padding: 18px;
+    margin: 14px 0;
+}
+
+.empresa-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.empresa h3 {
+    margin: 0 0 8px;
+}
+
+.empresa p {
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 30px;
+    background: #fff3d6;
+    color: #8a5b00;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.badge.approved {
+    background: #e4f5e9;
+    color: #17673c;
+}
+
+.badge.rejected {
+    background: #ffebe9;
+    color: #a22b22;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.acoes input {
+    flex: 1;
+    min-width: 180px;
+    margin: 0;
+}
+
+.vazio {
+    padding: 20px;
+    text-align: center;
+    color: #627368;
+}
+
+.nota {
+    font-size: .9rem;
+    color: #63756a;
+    line-height: 1.6;
+    padding: 8px 2px 28px;
+}
+
+.nota i {
+    color: #238152;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin-top: 12px;
+    }
+
+    .painel {
+        padding: 18px;
+    }
+
+    .contadores {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-lista {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .empresa-topo {
+        flex-direction: column;
+    }
+
+    .topo {
+        padding: 14px 18px;
+    }
+}
+
+.form-gift {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0 30px;
+}
+
+.form-gift label {
+    font-weight: 700;
+}
+
+.form-gift input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccd8ce;
+    border-radius: 9px;
+    font: inherit;
+}
+
+.form-gift button {
+    align-self: end;
+}
+
+@media (max-width: 650px) {
+
+    .form-gift {
+        grid-template-columns: 1fr;
+    }
+}

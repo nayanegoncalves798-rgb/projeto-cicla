@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área da empresa | CICLA</title>
+  <link rel="stylesheet" href="empresa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="../header-cicla.css">
+</head>
+<body>
+  <header id="cicla-header"><a class="cicla-marca" href="../index/index.html"><img src="../png icon.png" alt="">CICLA</a><nav class="cicla-menu" aria-label="Navegação principal"><a href="../index/index.html">Início</a><a href="../locais/locais.html">Locais</a><a href="../tutoriais/tutoriais.html">Tutoriais</a><a href="../beneficios/beneficios.html">Benefícios</a><a href="../sobre/sobre.html">Sobre</a></nav><div class="cicla-acoes"><button id="sair" class="cicla-sair" type="button">Sair</button></div></header>
+  <main class="conteudo">
+    <section class="boas-vindas">
+      <div><span class="etiqueta">PORTAL DO PARCEIRO</span><h1>Área da empresa</h1><p>Gerencie seu cadastro e acompanhe a participação da sua empresa na reciclagem.</p></div>
+      <div class="icone-hero" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+    </section>
+    <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+    <section class="cartao perfil">
+      <div class="titulo-cartao"><div><span class="etiqueta">SEU CADASTRO</span><h2>Dados da empresa</h2></div><span id="status" class="status">Carregando...</span></div>
+      <p id="explicacao" class="explicacao">Carregando os dados da sua conta...</p>
+      <form id="formEmpresa">
+        <div class="grade">
+          <label>Nome da empresa<input id="nomeEmpresa" required maxlength="150" autocomplete="organization"></label>
+          <label>CNPJ<input id="cnpj" required maxlength="18" placeholder="00.000.000/0000-00" inputmode="numeric"></label>
+        </div>
+        <button class="btn-principal" type="submit" id="enviarCadastro">Enviar cadastro para análise</button>
+      </form>
+    </section>
+    <section class="cartao">
+      <div class="titulo-cartao"><div><span class="etiqueta">PONTOS DE COLETA</span><h2>Seus locais</h2></div><i class="fa-solid fa-location-dot icone-titulo"></i></div>
+      <p class="explicacao">Depois que o cadastro da empresa for aprovado, você poderá cadastrar e administrar seus pontos de coleta por aqui.</p>
+      <form id="formPonto" class="escondido">
+        <div class="grade"><label>Nome do ponto<input id="pontoNome" required maxlength="150"></label><label>Endereço completo<input id="pontoEndereco" required maxlength="250"></label><label>Cidade<input id="pontoCidade" required maxlength="100"></label><label>Estado (UF)<input id="pontoEstado" required maxlength="2" minlength="2" placeholder="GO"></label></div>
+        <button class="btn-principal" type="submit">Cadastrar ponto de coleta</button>
+      </form>
+      <div id="listaPontos" class="lista"><p class="vazio">Nenhum ponto de coleta cadastrado por esta conta.</p></div>
+    </section>
+    <section class="cartao">
+      <div class="titulo-cartao"><div><span class="etiqueta">ENTREGAS</span><h2>Entregas recebidas</h2></div><i class="fa-solid fa-recycle icone-titulo"></i></div>
+      <p class="explicacao">As entregas aparecerão aqui quando houver pontos de coleta aprovados vinculados à sua empresa. A confirmação precisa ser feita por uma conta autorizada.</p>
+      <div id="listaEntregas" class="lista"><p class="vazio">Carregando entregas...</p></div>
+    </section>
+    <p class="nota-seguranca"><i class="fa-solid fa-shield-halved"></i> Por segurança, o cadastro empresarial começa como pendente. A aprovação não pode ser feita pela própria conta.</p>
+  </main>
+  <script type="module" src="empresa.js"></script>
+</body>
+</html>

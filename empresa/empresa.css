@@ -1,0 +1,376 @@
+
+:root {
+    --verde: #207b4b;
+    --verde-escuro: #155b37;
+    --rosa: #e84d83;
+    --fundo: #f5f8f5;
+    --texto: #24352b;
+    --suave: #68786e;
+    --borda: #e1e9e2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topo {
+    height: 76px;
+    background: #fff;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(5%, calc((100% - 1180px)/2));
+    gap: 24px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--verde);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.topo nav {
+    display: flex;
+    gap: 25px;
+}
+
+.topo nav a {
+    color: #34453a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.topo nav a:hover {
+    color: var(--verde);
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.btn-sair {
+    border: 1px solid var(--borda);
+    background: #fff;
+    color: var(--texto);
+    border-radius: 9px;
+    padding: 10px 18px;
+}
+
+.conteudo {
+    max-width: 1000px;
+    width: 90%;
+    margin: 38px auto 60px;
+}
+
+.boas-vindas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(120deg, #e6f5e9, #f5fbf5);
+    border-radius: 20px;
+    padding: 34px 38px;
+    margin-bottom: 22px;
+}
+
+.etiqueta {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--verde);
+    font-weight: 800;
+}
+
+.boas-vindas h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 9px 0;
+    color: #194c30;
+}
+
+.boas-vindas p {
+    color: #52665a;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+}
+
+.icone-hero {
+    font-size: 54px;
+    color: var(--verde);
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.cartao {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 26px;
+    margin: 18px 0;
+    box-shadow: 0 5px 20px #173b2010;
+}
+
+.titulo-cartao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-cartao h2 {
+    font-size: 23px;
+    margin: 6px 0 0;
+}
+
+.icone-titulo {
+    color: var(--verde);
+    font-size: 25px;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 8px 12px;
+    background: #fff0d5;
+    color: #885a00;
+    white-space: nowrap;
+}
+
+.status.aprovada {
+    background: #e0f5e6;
+    color: #17653a;
+}
+
+.status.rejeitada {
+    background: #fde6e6;
+    color: #a32828;
+}
+
+.explicacao {
+    color: var(--suave);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 14px 0 20px;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.grade label {
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grade input {
+    width: 100%;
+    border: 1px solid #d6e1d8;
+    border-radius: 9px;
+    padding: 13px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+}
+
+.grade input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px #207b4b18;
+}
+
+.btn-principal {
+    margin-top: 20px;
+    border: 0;
+    border-radius: 9px;
+    background: var(--verde);
+    color: #fff;
+    padding: 13px 20px;
+    font-weight: 700;
+}
+
+.btn-principal:hover {
+    background: var(--verde-escuro);
+}
+
+.btn-principal:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+.aviso {
+    display: none;
+    padding: 13px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.aviso.visivel {
+    display: block;
+}
+
+.aviso.erro {
+    background: #fde8e8;
+    color: #962b2b;
+}
+
+.aviso.sucesso {
+    background: #e5f5e9;
+    color: #1d6338;
+}
+
+.lista {
+    display: grid;
+    gap: 10px;
+}
+
+.item-lista {
+    padding: 15px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+.item-lista strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.item-lista p,
+.vazio {
+    color: var(--suave);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 4px 0;
+}
+
+.nota-seguranca {
+    color: var(--suave);
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
+    margin: 25px 0;
+}
+
+.nota-seguranca i {
+    color: var(--verde);
+    margin-right: 5px;
+}
+
+.escondido {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 0 5%;
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .topo nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .topo nav a {
+        font-size: 12px;
+    }
+
+    .boas-vindas {
+        padding: 25px 22px;
+    }
+
+    .icone-hero {
+        width: 65px;
+        height: 65px;
+        font-size: 32px;
+    }
+
+    .cartao {
+        padding: 20px;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-cartao h2 {
+        font-size: 20px;
+    }
+}
+
+.confirmar-entrega {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.confirmar-entrega label {
+    display: grid;
+    gap: 5px;
+    font-weight: 700;
+}
+
+.confirmar-entrega input {
+    padding: 10px;
+    border: 1px solid #ccd8ce;
+    border-radius: 8px;
+    max-width: 150px;
+}
+
+.confirmar-entrega button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 14px;
+    background: #18784c;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.confirmar-entrega .rejeitar {
+    background: #fff0ee;
+    color: #a22b22;
+}
+
+@media (max-width: 600px) {
+
+    .confirmar-entrega {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .confirmar-entrega input {
+        max-width: none;
+    }
+}
